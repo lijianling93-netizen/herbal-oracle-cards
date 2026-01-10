@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Serif+SC:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --gold: #D4AF37;
+    --gold-light: #F0C852;
+    --gold-dark: #B8960C;
+    --sepia-bg: #f4f1ea;
+    --text-dark: #2c2c2c;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Playfair Display', 'Noto Serif SC', serif;
+    color: var(--text-dark);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel Decorative', 'Playfair Display', serif;
+  }
+
+  .font-cinzel {
+    font-family: 'Cinzel Decorative', serif;
+  }
+
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+/* 草药卡统一样式 */
+@layer components {
+  .herb-card {
+    display: inline-block;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: linear-gradient(145deg, #ffffff 0%, #f8f8f8 100%);
+  }
+
+  .herb-card:hover {
+    box-shadow: 0 16px 40px rgba(212, 175, 55, 0.4);
+    transform: translateY(-8px) scale(1.02);
+  }
+
+  .herb-card img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+  }
+
+  /* 金色边框按钮 */
+  .btn-gold {
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dark) 100%);
+    border: 2px solid var(--gold);
+    color: #2c2c2c;
+    box-shadow: 0 4px 16px rgba(212, 175, 55, 0.4);
+    transition: all 0.3s ease;
+  }
+
+  .btn-gold:hover {
+    box-shadow: 0 8px 24px rgba(212, 175, 55, 0.6);
+    transform: translateY(-2px);
+  }
+
+  /* 精致卡片容器 */
+  .card-elegant {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 248, 248, 0.9) 100%);
+    backdrop-filter: blur(20px);
+    border: 2px solid var(--gold);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@layer utilities {
+  .text-gold {
+    color: var(--gold);
+  }
+
+  .text-gold-light {
+    color: var(--gold-light);
+  }
+
+  .text-gold-dark {
+    color: var(--gold-dark);
+  }
+
+  .bg-gold {
+    background-color: var(--gold);
+  }
+
+  .bg-gold-light {
+    background-color: var(--gold-light);
+  }
+
+  .bg-gold-dark {
+    background-color: var(--gold-dark);
+  }
+
+  .border-gold {
+    border-color: var(--gold);
+  }
+
+  .from-gold-light {
+    --tw-gradient-from: var(--gold-light);
+  }
+
+  .to-gold-dark {
+    --tw-gradient-to: var(--gold-dark);
+  }
+
+  .card-shadow {
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+  }
+
+  .card-shadow-lg {
+    box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3);
+  }
+
+  .card-shadow-xl {
+    box-shadow: 0 25px 80px rgba(212, 175, 55, 0.4);
+  }
+
+  /* 增强的渐变背景 */
+  .bg-gradient-mystic {
+    background: linear-gradient(135deg, #a855f7 0%, #ec4899 25%, #f59e0b 50%, #f97316 75%, #dc2626 100%);
+  }
+
+  .bg-gradient-golden {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 25%, #fcd34d 50%, #fbbf24 75%, #f59e0b 100%);
+  }
+
+  .bg-gradient-sacred {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 25%, #d946ef 50%, #ec4899 75%, #f43f5e 100%);
+  }
+}
+
+/* 动画定义 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shuffleCard {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-15px) rotate(-8deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-8px) rotate(8deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes pulse-gold {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.8);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* 动画工具类 */
+.animate-shuffleCard {
+  animation: shuffleCard 0.6s ease-in-out;
+}
+
+.animate-pulse-gold {
+  animation: pulse-gold 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* 工具类 */
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.animate-shuffle {
+  animation: shuffleCard 1.5s ease-in-out infinite;
+}
+
+.animate-pulse-gold {
+  animation: pulse-gold 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* 文本阴影增强 */
+.text-glow {
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+}
+
+.text-glow-lg {
+  text-shadow: 0 0 30px rgba(212, 175, 55, 0.8), 0 0 60px rgba(212, 175, 55, 0.4);
+}
+
+/* 增强的背景渐变 */
+.bg-enhanced-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(192, 132, 252, 0.4) 0%,
+    rgba(236, 72, 153, 0.4) 25%,
+    rgba(251, 191, 36, 0.4) 50%,
+    rgba(249, 115, 22, 0.4) 75%,
+    rgba(220, 38, 38, 0.4) 100%
+  );
+}
+
+.dark .bg-enhanced-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(88, 28, 135, 0.8) 0%,
+    rgba(131, 24, 67, 0.8) 25%,
+    rgba(120, 53, 15, 0.8) 50%,
+    rgba(124, 45, 18, 0.8) 75%,
+    rgba(153, 27, 27, 0.8) 100%
+  );
+}

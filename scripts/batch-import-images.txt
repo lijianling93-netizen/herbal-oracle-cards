@@ -1,0 +1,79 @@
+# 批量图片集成脚本指南
+
+## 剩余34张卡片ID和名称对照
+
+根据数据文件中的信息，剩余卡片列表：
+
+ID 22 - 蛇根草 (Jergon Sacha)
+ID 23 - 乳蓟 (Milk Thistle)
+ID 24 - 烟草 (Tobacco)
+ID 25 - 猫爪草 (Cat's Claw)
+ID 26 - 虫草 (Cordyceps)
+ID 27 - 灵芝 (Reishi)
+ID 28 - 接骨木 (Elderberry)
+ID 29 - 五味子 (Schisandra)
+ID 30 - 紫锥花 (Echinacea)
+ID 31 - 大麻 (Cannabis)
+ID 32 - 康复力 (Comfrey)
+ID 33 - 山金车 (Arnica)
+ID 34 - 卡痛叶 (Kratom)
+ID 35 - 木贼草 (Horsetail)
+ID 36 - 古柯叶 (Coca)
+ID 37 - 红景天 (Rhodiola)
+ID 38 - 可可 (Cacao)
+ID 39 - 银杏 (Ginkgo)
+ID 40 - 人参 (Ginseng)
+ID 41 - 罂粟 (Poppy)
+ID 42 - 鹅膏菌 (Amanita)
+ID 43 - 西番莲 (Passionflower)
+ID 44 - 缬草 (Valerian)
+ID 45 - 曼德拉草 (Mandrake)
+ID 46 - 曼陀罗花 (Brugmansia)
+ID 47 - 头巾草 (Skullcap)
+ID 48 - 卡瓦卡瓦 (Kava Kava)
+ID 49 - 裸盖菇 (Psilocybe)
+ID 50 - 死藤水 (Ayahuasca)
+ID 51 - 黑月莉莉丝 (Black Moon Lilith)
+ID 52 - 谷神星 (Ceres)
+ID 53 - 凯龙星 (Chiron)
+ID 54 - 睡茄 (Ashwagandha)
+ID 55 - 圣木 (Palo Santo)
+
+## 推荐的文件命名格式
+
+使用小写英文名，去掉空格和特殊字符：
+
+22-jergonsacha.jpg
+23-milkthistle.jpg
+24-tobacco.jpg
+25-catsclaw.jpg
+26-cordyceps.jpg
+27-reishi.jpg
+28-elderberry.jpg
+29-schisandra.jpg
+30-echinacea.jpg
+31-cannabis.jpg
+32-comfrey.jpg
+33-arnica.jpg
+34-kratom.jpg
+35-horsetail.jpg
+36-coca.jpg
+37-rhodiola.jpg
+38-cacao.jpg
+39-ginkgo.jpg
+40-ginseng.jpg
+41-poppy.jpg
+42-amanita.jpg
+43-passionflower.jpg
+44-valerian.jpg
+45-mandrake.jpg
+46-brugmansia.jpg
+47-skullcap.jpg
+48-kavakava.jpg
+49-psilocybe.jpg
+50-ayahuasca.jpg
+51-blackmoonlilith.jpg
+52-ceres.jpg
+53-chiron.jpg
+54-ashwagandha.jpg
+55-palosanto.jpg
