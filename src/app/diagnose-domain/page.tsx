@@ -181,7 +181,32 @@ export default function DiagnoseDomainPage() {
               <AlertTriangle size={18} />
               <span>⚠️ 检测到 dev.coze.site 域名</span>
             </div>
+            <AlertTriangle size={18} />
+<span>⚠️ 检测到 dev.coze.site 域名</span>
+</div>
+          ) : isVercel ? (
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              padding: '0.75rem',
+              background: '#d1fae5',
+              borderRadius: '8px',
+              color: '#065f46'
+            }}>
+              <CheckCircle size={18} />
+              <span>✅ 正在使用 Vercel 生产环境域名</span>
+            </div>
           ) : (
+<div style={{
+  display: 'flex',
+  alignItems: 'center',
+  gap: '0.5rem',
+  padding: '0.75rem',
+  background: '#fef3c7',
+  borderRadius: '8px',
+  color: '#92400e'
+}}>
             <div style={{
               display: 'flex',
               alignItems: 'center',
@@ -325,7 +350,7 @@ export default function DiagnoseDomainPage() {
         </div>
 
         {/* 解决方案 */}
-        {(isUsingDevCoze || !isUsingCorrectDomain) && (
+         {!isUsingValidDomain && (
           <div style={{
             background: '#fef3c7',
             border: '2px solid #f59e0b',
