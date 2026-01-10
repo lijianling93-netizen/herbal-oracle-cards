@@ -33,12 +33,13 @@ export default function Home() {
     // 检查是否使用 localhost 或 127.0.0.1
     const isLocalhost = hostname === 'localhost' || hostname === '127.0.0.1';
     const isDevCoze = hostname.includes('dev.coze.site');
+    setIsWrongDomain(!isLocalhost && !isDevCoze && !isProdCoze && !isVercel);
     const isProdCoze = hostname.includes('coze.site');
 
     // 只有在非 localhost、非 coze 预览环境时才显示警告
     setIsWrongDomain(!isLocalhost && !isDevCoze && !isProdCoze);
 
-    console.log('[Page] 当前域名:', hostname, '是否异常:', !isLocalhost && !isDevCoze && !isProdCoze);
+    console.log('[Page] 当前域名:', hostname, '是否异常:', !isLocalhost && !isDevCoze && !isProdCoze && !isVercel);
   }, []);
 
   // 监控用户状态变化

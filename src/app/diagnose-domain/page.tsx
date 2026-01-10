@@ -83,7 +83,8 @@ export default function DiagnoseDomainPage() {
 
   const isUsingCorrectDomain = info?.hostname === 'localhost' || info?.hostname.startsWith('127.0.0.1');
   const isUsingDevCoze = info?.hostname.includes('dev.coze.site');
-
+  const isVercel = info?.hostname.includes('vercel.app');
+  const isUsingValidDomain = isUsingCorrectDomain || isUsingDevCoze || isVercel;
   if (loading) {
     return (
       <div style={{
